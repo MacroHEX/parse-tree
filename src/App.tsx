@@ -1,11 +1,18 @@
-import {FormEvent, useEffect, useRef, useState} from 'react';
-import {ConstantNode, MathNode, OperatorNode, parse} from 'mathjs';
+// ::: Libraries
+//
 import * as d3 from 'd3';
+import {ConstantNode, MathNode, OperatorNode, parse} from 'mathjs';
 
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
+// ::: React
+//
+import {FormEvent, useEffect, useRef, useState} from 'react';
+
+// ::: UI
+//
 import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
 
 interface TreeNode {
   value: string;

@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Parse Tree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Estaba sin inspiración alguna así que aproveche mi tiempo libre para realizar un visualizador de árboles sintácticos,
+aprovechando que en mi materia actual de la facultad estamos haciendo ejercicios con las mismas y el graficarlo se
+vuelve tedioso.
 
-Currently, two official plugins are available:
+`App creada para resolver un problema de la clase Compiladores de la Facultad Nihon Gakko.`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Ejemplo del PDF
 
-## Expanding the ESLint configuration
+![Ejemplo](https://i.imgur.com/7KppX3j.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Podemos apreciar la generación del árbol utilizando `(2 + 3) * (10 - 5)` como parámetro.
 
-- Configure the top-level `parserOptions` property like this:
+## Renderización
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![Render](https://i.imgur.com/KGVXmXR.png)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Datos de Ejemplo
+
+- 5 – 3 * 2 + 4 – 4 / 2
+- ( 4 + 3 ) – ( 3 * 2 ) + 1
+- 3 * ( 4 * 2 – 3 ) – ( 4 + 6 / 3 )
+- 2 { 4 [ 7 + 4 ( 5 * 3 – 9 ) ] – 3 ( 40 – 8 ) }
+- ( 5 + 3 * 2 / 6 – 4 ) ( 4 / 2 – 3 + 6 ) / ( 7 – 8 / 2 – 2 ) ^ 2
+- [ ( 17 – 15 ) ^ 3 + ( 7 + 12 ) ^ 2 / [ ( 6 – 7 ) * ( 12 – 23 ) ]]
+
+## TODO
+
+- [ ] Separar responsabilidades en componentes (Dudo que revisite esto)
